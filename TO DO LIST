@@ -9,7 +9,7 @@
     -index.php:chemin vers pages/index.php
     -pages
         -index.php(liste des departements)
-    -ytyuctujytUploads
+    -Uploads
     -traitements
 
 [ok](4221)-connexion.php
