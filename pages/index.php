@@ -17,12 +17,12 @@ $result= get_department_manager();
 
 <header class="bg-dark text-white p-3 mb-4">
     <div class="container">
-        <h1 class="h3">Liste des Departements</h1>
+        <h1 class="h3 text-center">Liste des Departements</h1>
     </div>
 </header>
 
 <main class="container">
-    <table class="table table-striped table-bordered">
+    <table class="table table-striped table-bordered text-center">
         <thead class="table-dark">
             <tr>
                 <th>Code</th>

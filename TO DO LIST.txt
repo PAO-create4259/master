@@ -4,6 +4,7 @@
 [ok].base sql 
 [ok] Voir l'image pour voir la structure de la base (images/employees.png) sudo /opt/lampp/bin/mysql -u root -p 
 
+-version1
 [ok](4259)-structure
     -inc:connexion.php;fonction.php;logout.php
     -index.php:chemin vers pages/index.php
@@ -40,3 +41,31 @@
    [ok] -function get_department_manager() pour afficher tous les employes et avec ceux d en cours
    [ok] -function get_employe_department($dept_no) pour lister les emloyes de chaque departement
 
+-version2
+    -employees.php
+        -ajouter un lien vers fiche.php
+        -redirige vers traitement_fiche.php
+    -traitement_fiche.php
+    Lorsqu'on clique sur un employé, on doit afficher la fiche de l'employé
+        -fonction.php :fonction get_fiche_employe()
+    -fiche.php
+    -creer la page fiche.php
+        -numero;
+        -date de naissance
+        -nom
+        -prenom
+        -genre
+        -date debut d emploi
+        -tableau:historique de salaire
+            -salary
+            -from_date
+            -to_date
+        methode:table salaries;titles
+    -formulaire de recherche 
+    SELECT * FROM etudiants
+LIMIT 20, 10;
+-- saute les 20 premiers et affiche les 10 suivants
+-creer un lien vers les 20 suivants
+-creer un lien vers les 20 precedents
+
+    
