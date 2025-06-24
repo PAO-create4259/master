@@ -21,6 +21,7 @@ $result = get_employe_department($dept_no);
 </header>
 
 <main class="container">
+     <a href="departements.php" class="btn btn-secondary mt-3">⬅ Retour aux départements</a>
     <table class="table table-hover table-bordered">
         <thead class="table-dark">
             <tr>
@@ -35,16 +36,17 @@ $result = get_employe_department($dept_no);
             <?php while ($row = mysqli_fetch_assoc($result)) : ?>
                 <tr>
                     <td><?= htmlspecialchars($row['emp_no']) ?></td>
-                    <td><?= htmlspecialchars($row['last_name']) ?></td>
+                    <td ><a class="btn-sm" href="../traitements/traitement_fiche.php?emp_no=<?= $row['emp_no']?>"><?= htmlspecialchars($row['last_name']) ?></a></td>
                     <td><?= htmlspecialchars($row['first_name']) ?></td>
                     <td><?= htmlspecialchars($row['gender']) ?></td>
                     <td><?= htmlspecialchars($row['hire_date']) ?></td>
+                  
                 </tr>
             <?php endwhile; ?>
         </tbody>
     </table>
 
-    <a href="departements.php" class="btn btn-secondary mt-3">⬅ Retour aux départements</a>
+   
 </main>
 
 <footer class="bg-light text-center py-3 mt-4">

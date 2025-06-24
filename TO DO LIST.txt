@@ -42,7 +42,7 @@
    [ok] -function get_employe_department($dept_no) pour lister les emloyes de chaque departement
 
 -version2
-    -employees.php
+    [ok]-employees.php
         -ajouter un lien vers fiche.php
         -redirige vers traitement_fiche.php
     -traitement_fiche.php
