@@ -67,5 +67,4 @@ LIMIT 20, 10;
 -- saute les 20 premiers et affiche les 10 suivants
 -creer un lien vers les 20 suivants
 -creer un lien vers les 20 precedents
-
-    
+   
