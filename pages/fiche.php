@@ -1,8 +1,41 @@
 <?php
-session_start();
-include("../inc/fonction.php");
-$emp_no = $_GET['emp_no'];
-$result = get_fiche_employe($emp_no);
+    session_start();
+    include("../inc/fonction.php");
+    $emp_no = $_GET['emp_no'];
+    $result = get_fiche_employe($emp_no);
+
+    $info = null;
+    $salaires = [];
+    $titres = [];
+
+    while ($row = mysqli_fetch_assoc($result)) {
+        if (!$info) {
+            $info = [
+                'first_name' => $row['first_name'],
+                'last_name' => $row['last_name'],
+                'gender' => $row['gender'],
+                'hire_date' => $row['hire_date']
+            ];
+        }
+
+        // Ajouter salaire s'il y en a
+        if (!empty($row['salary'])) {
+            $salaires[] = [
+                'salary' => $row['salary'],
+                'from' => $row['salary_from'],
+                'to' => $row['salary_to']
+            ];
+        }
+
+        // Ajouter titre s'il y en a
+        if (!empty($row['title'])) {
+            $titres[] = [
+                'title' => $row['title'],
+                'from' => $row['title_from'],
+                'to' => $row['title_to']
+            ];
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -21,6 +54,7 @@ $result = get_fiche_employe($emp_no);
 </header>
 
 <main class="container my-4">
+    
     <?php if ($info): ?>
     <div class="card mb-4">
         <div class="card-body">
