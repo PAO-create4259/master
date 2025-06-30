@@ -21,8 +21,9 @@ $result = get_employe_department($dept_no);
 </header>
 
 <main class="container">
+     <a href="formulaire.php" class="btn btn-primary mt-6">Recherche</a>
      <a href="departements.php" class="btn btn-secondary mt-3">⬅ Retour aux départements</a>
-    <table class="table table-hover table-bordered">
+     <table class="table table-hover table-bordered">
         <thead class="table-dark">
             <tr>
                 <th>Matricule</th>

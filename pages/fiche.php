@@ -22,8 +22,8 @@
         if (!empty($row['salary'])) {
             $salaires[] = [
                 'salary' => $row['salary'],
-                'from' => $row['salary_from'],
-                'to' => $row['salary_to']
+                'from_date' => $row['salary_from'],
+                'to_date' => $row['salary_to']
             ];
         }
 
@@ -31,8 +31,8 @@
         if (!empty($row['title'])) {
             $titres[] = [
                 'title' => $row['title'],
-                'from' => $row['title_from'],
-                'to' => $row['title_to']
+                'from_date' => $row['title_from'],
+                'to_date' => $row['title_to']
             ];
         }
     }
